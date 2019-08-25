@@ -43,7 +43,6 @@ public class A1Novice {
 	}
 
 	/*
-	 * 
 	 * Formats first and last names into F. Last
 	 * 
 	 */
@@ -62,8 +61,7 @@ public class A1Novice {
 		return formattedNames;
 	}
 
-	/*
-	 * 
+	/* 
 	 * Prints the output of the program name: total
 	 * 
 	 */
