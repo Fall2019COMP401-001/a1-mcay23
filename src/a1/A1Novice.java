@@ -4,9 +4,10 @@ import java.util.Scanner;
 
 public class A1Novice {
 
+	static Scanner scan = new Scanner(System.in);
+	
 	public static void main(String[] args) {
 
-		Scanner scan = new Scanner(System.in);
 		int customerAmount = scan.nextInt();
 
 		// indexing for the following arrays follow the same customer for each
@@ -26,17 +27,8 @@ public class A1Novice {
 			customerNames[i][1] = scan.next();
 			customerPurchaseAmount[i] = scan.nextInt();
 
-			// initialize totals
-			totals[i] = 0.0;
-			for (int k = 0; k < customerPurchaseAmount[i]; k++) {
-
-				int amount = scan.nextInt();
-				// item name is not used in Novice
-				String item = scan.next();
-				double price = scan.nextDouble();
-				totals[i] += amount * price;
-
-			}
+			// get total for this customer
+			totals[i] = getTotal(customerPurchaseAmount[i]);
 		}
 		String formattedNames[] = formatNames(customerNames);
 		printOutput(formattedNames, totals);
@@ -61,7 +53,19 @@ public class A1Novice {
 		return formattedNames;
 	}
 
-	/* 
+	public static double getTotal(int customerPurchaseAmount) {
+		double total = 0.0;
+		for (int k = 0; k < customerPurchaseAmount; k++) {
+			int amount = scan.nextInt();
+			// item name is not used in Novice
+			String item = scan.next();
+			double price = scan.nextDouble();
+			total += amount * price;
+		}
+		return total;
+	}
+	
+	/*
 	 * Prints the output of the program name: total
 	 * 
 	 */
