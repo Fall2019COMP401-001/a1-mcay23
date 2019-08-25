@@ -1,5 +1,6 @@
 package a1;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -62,14 +63,24 @@ public class A1Jedi {
 			scan.next();
 			scan.next();
 			int customerPurchaseAmount = scan.nextInt();
+			
+			// array list keeps track of duplicate items
+			ArrayList<String> items = new ArrayList<String>();
 			for (int j = 0; j < customerPurchaseAmount; j++) {
+				
 				int itemAmount = scan.nextInt();
 				String itemName = scan.next();
 				int itemTotal = itemData.get(itemName);
-				int customerTotal = customersBought.get(itemName);
+
 				// update the number of items bought
 				itemData.put(itemName, itemTotal + itemAmount);
-				customersBought.put(itemName, customerTotal + 1);
+				
+				// only add customer if item is not duplicate
+				if(!items.contains(itemName)) {
+					items.add(itemName);
+					int customerTotal = customersBought.get(itemName);
+					customersBought.put(itemName, customerTotal + 1);
+				}
 			}
 		}
 
