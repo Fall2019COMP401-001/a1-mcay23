@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class A1Novice {
 
 	static Scanner scan = new Scanner(System.in);
-	
+
 	public static void main(String[] args) {
 
 		int customerAmount = scan.nextInt();
@@ -58,13 +58,13 @@ public class A1Novice {
 		for (int k = 0; k < customerPurchaseAmount; k++) {
 			int amount = scan.nextInt();
 			// item name is not used in Novice
-			String item = scan.next();
+			scan.next();
 			double price = scan.nextDouble();
 			total += amount * price;
 		}
 		return total;
 	}
-	
+
 	/*
 	 * Prints the output of the program name: total
 	 * 

@@ -28,7 +28,7 @@ public class A1Adept {
 		}
 		printOutput(customerNames, totals);
 	}
-	
+
 	/*
 	 * Get item:price data from input and stores as a map
 	 * 
@@ -36,7 +36,7 @@ public class A1Adept {
 	public static Map<String, Double> getItemData(int itemAmount) {
 
 		Map<String, Double> itemData = new HashMap<>();
-		
+
 		// read each item into the map
 		for (int i = 0; i < itemAmount; i++) {
 			String itemName = scan.next();
@@ -45,7 +45,7 @@ public class A1Adept {
 		}
 		return itemData;
 	}
-	
+
 	/*
 	 * Reads input and calculates total for each customer
 	 * 
@@ -60,10 +60,10 @@ public class A1Adept {
 		}
 		return customerTotal;
 	}
-	
+
 	/*
-	 * Prints the output with the correct form
-	 * calls getMaxIndex(), getMinIndex(), getAverage()
+	 * Prints the output with the correct form calls getMaxIndex(),
+	 * getMinIndex(), getAverage()
 	 * 
 	 */
 	public static void printOutput(String customerNames[], double totals[]) {
@@ -81,7 +81,7 @@ public class A1Adept {
 		System.out.printf("%.2f", average);
 		System.out.println();
 	}
-	
+
 	/*
 	 * Get the index containing the maximum total number
 	 * 
@@ -113,7 +113,7 @@ public class A1Adept {
 		}
 		return minIndex;
 	}
-	
+
 	/*
 	 * Get the average of an array of doubles
 	 * 
@@ -127,4 +127,3 @@ public class A1Adept {
 		return average;
 	}
 }
-
