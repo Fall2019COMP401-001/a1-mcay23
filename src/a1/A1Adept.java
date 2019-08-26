@@ -89,9 +89,8 @@ public class A1Adept {
 	public static int getMaxIndex(double totals[]) {
 
 		int maxIndex = 0;
-
 		for (int i = 0; i < totals.length - 1; i++) {
-			if (totals[i + 1] > totals[i]) {
+			if (totals[i + 1] > totals[maxIndex]) {
 				maxIndex = i + 1;
 			}
 		}
@@ -105,9 +104,8 @@ public class A1Adept {
 	public static int getMinIndex(double totals[]) {
 
 		int minIndex = 0;
-
 		for (int i = 0; i < totals.length - 1; i++) {
-			if (totals[i + 1] < totals[i]) {
+			if (totals[i + 1] < totals[minIndex]) {
 				minIndex = i + 1;
 			}
 		}
