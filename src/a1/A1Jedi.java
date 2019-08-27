@@ -102,7 +102,7 @@ public class A1Jedi {
 	public static void printOutput(String[][] itemTally) {
 
 		for (int i = 0; i < itemTally.length; i++) {
-			if (Integer.parseInt(itemTally[i][1]) == 0) {
+			if (itemTally[i][1].equals("0")) {
 				System.out.println("No customers bought " + itemTally[i][0]);
 			} else {
 				System.out.println(itemTally[i][1] + " customers bought "
